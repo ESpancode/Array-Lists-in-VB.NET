@@ -1,0 +1,30 @@
+Module Module1
+
+    'This is my Array List program that I was able to create in my Second Year of University
+
+    Dim MyAL As New ArrayList 'AL is Array List and calling the My AL function
+
+    Sub Main()
+        MyAL.Add("Hi") 'Hi will be added to the Array List
+        MyAL.Add("Sukh") 'Sukh is added to Array List
+        MyAL.Add(":)") ':) will be added to the Array List
+
+        Console.WriteLine("Hi Sukh :)") ' All of the content shown above will be displayed on screen
+
+        'All properties and values will be displayed from Array List
+
+        TextBox2.Text = "myAL"
+        TextBox2.Text = TextBox2.Text & "   Count: {1} " & MyAL.Count
+        TextBox2.Text = TextBox2.Text & "   Capacity: {2}" & MyAL.Capacity
+        TextBox2.Text = TextBox2.Text & "   Values:"
+
+        Dim obj As [Object] 'Dim declares data types of a variables
+        For Each obj In MyAL 'Values are printed within Array
+            TextBox2.Text = TextBox2.Text & "    {1}" & obj
+        Next obj
+    End Sub
+    Private Function TextBox2() As Object 'Object is linked to TextBox2 and is declared
+        Throw New NotImplementedException ' Expections are thrown when calling arguments
+    End Function
+
+End Module
